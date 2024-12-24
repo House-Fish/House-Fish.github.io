@@ -15,7 +15,7 @@
     <script>
         const encoded = "cutesy";
         const iv = window.crypto.getRandomValues(new Uint8Array(12));
-        const out = Crypto.subtle.encrypt(
+        const out = window.crypto.subtle.encrypt(
             { name: "AES-GCM", iv: iv},
             "key",
             encoded,
